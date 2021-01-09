@@ -60,9 +60,11 @@
   "An alist of markers used in mu4e.")
 
 (defun mu4e-marker-icons--store (l)
+  "Store mu4e header markers value from `L'."
   (mapcar (lambda (x) (set (cdr x) (symbol-value (car x)))) l))
 
 (defun mu4e-marker-icons--restore (l)
+  "Restore mu4e header markers value from `L'."
   (let ((lrev (mapcar (lambda (x) (cons (cdr x) (car x))) l)))
     (mu4e-save lrev)))
 
