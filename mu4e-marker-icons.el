@@ -1,12 +1,12 @@
-;;; mu4e-marker-icons.el --- Display icons for mu4e markers. -*- lexical-binding: t; -*-
+;;; mu4e-marker-icons.el --- Display icons for mu4e markers -*- lexical-binding: t; -*-
 ;; -*- coding: utf-8 -*-
 
-;;; Time-stamp: <2021-01-09 19:43:20 stardiviner>
+;;; Time-stamp: <2021-01-09 19:48:30 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1"))
 ;; Package-Version: 0.1.0
-;; Keywords: email
+;; Keywords: mail
 ;; homepage: https://github.com/stardiviner/mu4e-marker-icons
 
 ;; Copyright (C) 2020-2021 Free Software Foundation, Inc.
