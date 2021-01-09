@@ -1,13 +1,35 @@
 ;;; mu4e-marker-icons.el --- Display icons for mu4e markers. -*- lexical-binding: t; -*-
 ;; -*- coding: utf-8 -*-
 
-;;; Time-stamp: <2021-01-09 19:34:35 stardiviner>
+;;; Time-stamp: <2021-01-09 19:43:20 stardiviner>
+
+;; Authors: stardiviner <numbchild@gmail.com>
+;; Package-Requires: ((emacs "26.1"))
+;; Package-Version: 0.1.0
+;; Keywords: email
+;; homepage: https://github.com/stardiviner/mu4e-marker-icons
 
 ;; Copyright (C) 2020-2021 Free Software Foundation, Inc.
+;;
+;; mu4e-marker-icons is free software; you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 3, or (at your option)
+;; any later version.
+;;
+;; mu4e-marker-icons is distributed in the hope that it will be useful, but WITHOUT
+;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+;; or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+;; License for more details.
+;;
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
-
+;; Usage
+;;
+;; (mu4e-marker-icons-mode 1)
 
 ;;; Code:
 
