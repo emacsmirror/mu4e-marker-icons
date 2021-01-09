@@ -1,7 +1,7 @@
 ;;; mu4e-marker-icons.el --- Display icons for mu4e markers -*- lexical-binding: t; -*-
 ;; -*- coding: utf-8 -*-
 
-;;; Time-stamp: <2021-01-09 19:48:30 stardiviner>
+;;; Time-stamp: <2021-01-09 19:55:37 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1"))
@@ -66,7 +66,7 @@
 (defun mu4e-marker-icons--restore (l)
   "Restore mu4e header markers value from `L'."
   (let ((lrev (mapcar (lambda (x) (cons (cdr x) (car x))) l)))
-    (mu4e-save lrev)))
+    (mu4e-marker-icons--store lrev)))
 
 
 (defun mu4e-marker-icons-enable ()
