@@ -1,7 +1,7 @@
 ;;; mu4e-marker-icons.el --- Display icons for mu4e markers -*- lexical-binding: t; -*-
 ;; -*- coding: utf-8 -*-
 
-;;; Time-stamp: <2021-01-09 19:56:23 stardiviner>
+;;; Time-stamp: <2021-01-09 20:01:59 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (all-the-icons "4.0.0"))
@@ -51,13 +51,7 @@
     (mu4e-headers-passed-mark . mu4e-marker-icons-saved-headers-passed-mark)
     (mu4e-headers-flagged-mark . mu4e-marker-icons-saved-headers-flagged-mark)
     (mu4e-headers-replied-mark . mu4e-marker-icons-saved-headers-replied-mark)
-    (mu4e-headers-trashed-mark . mu4e-marker-icons-saved-headers-trashed-mark)
-    ;; thread prefix marks
-    (mu4e-headers-default-prefix . mu4e-marker-icons-saved-headers-default-prefix)
-    (mu4e-headers-has-child-prefix . mu4e-marker-icons-saved-headers-has-child-prefix)
-    (mu4e-headers-empty-parent-prefix . mu4e-marker-icons-saved-headers-empty-parent-prefix)
-    (mu4e-headers-first-child-prefix . mu4e-marker-icons-saved-headers-first-child-prefix)
-    (mu4e-headers-duplicate-prefix . mu4e-marker-icons-saved-headers-duplicate-prefix))
+    (mu4e-headers-trashed-mark . mu4e-marker-icons-saved-headers-trashed-mark))
   "An alist of markers used in mu4e.")
 
 (defun mu4e-marker-icons--store (l)
@@ -113,24 +107,7 @@
                                        'face 'mu4e-replied-face))
    mu4e-headers-trashed-mark `("T" . ,(propertize
                                        (all-the-icons-material "delete_forever")
-                                       'face 'mu4e-trashed-face))
-   ;; thread prefix marks
-   mu4e-headers-default-prefix `("|" . ,(propertize
-                                         (all-the-icons-material "message")
-                                         'face `(:family ,(all-the-icons-material-family))))
-   mu4e-headers-has-child-prefix `("+" . ,(propertize ; "Parent" ╰
-                                           (all-the-icons-material "expand_more")
-                                           'face `(:family ,(all-the-icons-material-family))))
-   mu4e-headers-empty-parent-prefix `("-" . ,(propertize ; "Orphan"
-                                              (all-the-icons-material "navigate_before")
-                                              'face `(:family ,(all-the-icons-material-family))))
-   mu4e-headers-first-child-prefix `("\\" . ,(propertize
-                                              (all-the-icons-material "navigate_next")
-                                              'face `(:family ,(all-the-icons-material-family))))
-   mu4e-headers-duplicate-prefix `("=" . ,(propertize
-                                           (all-the-icons-material "content_copy")
-                                           'face `(:family ,(all-the-icons-material-family)
-                                                           :foreground "siennan")))))
+                                       'face 'mu4e-trashed-face))))
 
 (defun mu4e-marker-icons-disable ()
   "Disable mu4e-marker-icons."
