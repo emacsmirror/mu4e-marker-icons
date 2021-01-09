@@ -1,10 +1,10 @@
 ;;; mu4e-marker-icons.el --- Display icons for mu4e markers -*- lexical-binding: t; -*-
 ;; -*- coding: utf-8 -*-
 
-;;; Time-stamp: <2021-01-09 19:55:37 stardiviner>
+;;; Time-stamp: <2021-01-09 19:56:23 stardiviner>
 
 ;; Authors: stardiviner <numbchild@gmail.com>
-;; Package-Requires: ((emacs "26.1"))
+;; Package-Requires: ((emacs "26.1") (all-the-icons "4.0.0"))
 ;; Package-Version: 0.1.0
 ;; Keywords: mail
 ;; homepage: https://github.com/stardiviner/mu4e-marker-icons
@@ -34,6 +34,7 @@
 ;;; Code:
 
 (require 'mu4e-headers)
+(require 'all-the-icons)
 
 (defgroup mu4e-marker-icons nil
   "Display icons for mu4e markers."
