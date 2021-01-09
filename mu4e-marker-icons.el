@@ -35,9 +35,9 @@
 
 (require 'mu4e-headers)
 
-(defgroup mu4e-marker-icons-mode nil
+(defgroup mu4e-marker-icons nil
   "Display icons for mu4e markers."
-  :group 'mu4e-marker-icons-mode)
+  :group 'mu4e-marker-icons)
 
 (defvar mu4e-marker-icons-marker-alist
   '((mu4e-headers-seen-mark . mu4e-marker-icons-saved-headers-seen-mark)
