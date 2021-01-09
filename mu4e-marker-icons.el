@@ -133,6 +133,7 @@
   "Disable mu4e-marker-icons."
   (mu4e-marker-icons--restore mu4e-marker-icons-marker-alist))
 
+;;;###autoload
 (define-minor-mode mu4e-marker-icons-mode
   "Display icons for mu4e markers."
   :require 'mu4e-marker-icons-mode
