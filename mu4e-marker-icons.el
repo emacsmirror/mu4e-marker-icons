@@ -5,7 +5,7 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (all-the-icons "4.0.0"))
-;; Package-Version: 0.1.0
+;; Version: 0.1.0
 ;; Keywords: mail
 ;; homepage: https://github.com/stardiviner/mu4e-marker-icons
 
