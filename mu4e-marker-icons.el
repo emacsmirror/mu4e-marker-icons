@@ -1,8 +1,6 @@
 ;;; mu4e-marker-icons.el --- Display icons for mu4e markers -*- lexical-binding: t; -*-
 ;; -*- coding: utf-8 -*-
 
-;;; Time-stamp: <2021-01-09 20:01:59 stardiviner>
-
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (all-the-icons "4.0.0"))
 ;; Version: 0.1.0
