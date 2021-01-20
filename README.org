@@ -8,5 +8,5 @@ This package is a work after discussion on [[https://github.com/djcb/mu/issues/1
 
 * Installation
 
-This package will be soon available on MELPA.
+This package is already available on MELPA.
 
