@@ -10,3 +10,14 @@ This package is a work after discussion on [[https://github.com/djcb/mu/issues/1
 
 This package is already available on MELPA.
 
+#+begin_src emacs-lisp
+(use-package mu4e-marker-icons
+  :ensure t
+  :init (mu4e-marker-icons-mode 1))
+#+end_src
+
+* FAQ
+
+** Q: got Chinese characters when using mu4e-marker-icons
+
+Check out [[https://github.com/stardiviner/mu4e-marker-icons/issues/1][this issue]].
