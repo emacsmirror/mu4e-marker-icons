@@ -38,6 +38,11 @@
   "Display icons for mu4e markers."
   :group 'mu4e-marker-icons)
 
+(defcustom mu4e-marker-icons-use-unicode nil
+  "Whether use unicode icons instead of all-the-icons."
+  :type 'boolean
+  :safe #'booleanp)
+
 (defvar mu4e-marker-icons-marker-alist
   '((mu4e-headers-seen-mark . mu4e-marker-icons-saved-headers-seen-mark)
     (mu4e-headers-new-mark . mu4e-marker-icons-saved-headers-new-mark)
@@ -67,45 +72,58 @@
   (mu4e-marker-icons--store mu4e-marker-icons-marker-alist)
   (setq mu4e-use-fancy-chars t)
   (setq mu4e-headers-precise-alignment t)
-  (setq
-   mu4e-headers-seen-mark `("S" . ,(propertize
-                                    (all-the-icons-material "mail_outline")
-                                    'face `(:family ,(all-the-icons-material-family)
-                                                    :foreground ,(face-background 'default))))
-   mu4e-headers-new-mark `("N" . ,(propertize
-                                   (all-the-icons-material "markunread")
-                                   'face `(:family ,(all-the-icons-material-family)
-                                                   :foreground ,(face-background 'default))))
-   mu4e-headers-unread-mark `("u" . ,(propertize
-                                      (all-the-icons-material "notifications_none")
-                                      'face 'mu4e-unread-face))
-   mu4e-headers-signed-mark `("s" . ,(propertize
-                                      (all-the-icons-material "check")
+  (if mu4e-marker-icons-use-unicode
+      ;; The unicode icons is totally from http://xenodium.com/mu4e-icons, Thanks, Alvaro Ramirez.
+      (setq mu4e-headers-unread-mark    '("u" .  "📩 ")
+            mu4e-headers-draft-mark     '("D" .  "🚧 ")
+            mu4e-headers-flagged-mark   '("F" .  "🚩 ")
+            mu4e-headers-new-mark       '("N" .  "✨ ")
+            mu4e-headers-passed-mark    '("P" .  "↪ ")
+            mu4e-headers-replied-mark   '("R" .  "↩ ")
+            mu4e-headers-seen-mark      '("S" .  " ")
+            mu4e-headers-trashed-mark   '("T" .  "🗑️")
+            mu4e-headers-attach-mark    '("a" .  "📎 ")
+            mu4e-headers-encrypted-mark '("x" .  "🔑 ")
+            mu4e-headers-signed-mark    '("s" .  "🖊 "))
+    (setq
+     mu4e-headers-seen-mark `("S" . ,(propertize
+                                      (all-the-icons-material "mail_outline")
                                       'face `(:family ,(all-the-icons-material-family)
-                                                      :foreground "DarkCyan")))
-   mu4e-headers-encrypted-mark `("x" . ,(propertize
-                                         (all-the-icons-material "enhanced_encryption")
-                                         'face `(:family ,(all-the-icons-material-family)
-                                                         :foreground "CornflowerBlue")))
-   mu4e-headers-draft-mark `("D" . ,(propertize
-                                     (all-the-icons-material "drafts")
-                                     'face 'mu4e-draft-face))
-   mu4e-headers-attach-mark `("a" . ,(propertize
-                                      (all-the-icons-material "attachment")
-                                      'face 'mu4e-attach-number-face))
-   mu4e-headers-passed-mark `("P" . ,(propertize ; ❯ (I'm participated in thread)
-                                      (all-the-icons-material "center_focus_weak")
-                                      'face `(:family ,(all-the-icons-material-family)
-                                                      :foreground "yellow")))
-   mu4e-headers-flagged-mark `("F" . ,(propertize
-                                       (all-the-icons-material "flag")
-                                       'face 'mu4e-flagged-face))
-   mu4e-headers-replied-mark `("R" . ,(propertize
-                                       (all-the-icons-material "reply_all")
-                                       'face 'mu4e-replied-face))
-   mu4e-headers-trashed-mark `("T" . ,(propertize
-                                       (all-the-icons-material "delete_forever")
-                                       'face 'mu4e-trashed-face))))
+                                                      :foreground ,(face-background 'default))))
+     mu4e-headers-new-mark `("N" . ,(propertize
+                                     (all-the-icons-material "markunread")
+                                     'face `(:family ,(all-the-icons-material-family)
+                                                     :foreground ,(face-background 'default))))
+     mu4e-headers-unread-mark `("u" . ,(propertize
+                                        (all-the-icons-material "notifications_none")
+                                        'face 'mu4e-unread-face))
+     mu4e-headers-signed-mark `("s" . ,(propertize
+                                        (all-the-icons-material "check")
+                                        'face `(:family ,(all-the-icons-material-family)
+                                                        :foreground "DarkCyan")))
+     mu4e-headers-encrypted-mark `("x" . ,(propertize
+                                           (all-the-icons-material "enhanced_encryption")
+                                           'face `(:family ,(all-the-icons-material-family)
+                                                           :foreground "CornflowerBlue")))
+     mu4e-headers-draft-mark `("D" . ,(propertize
+                                       (all-the-icons-material "drafts")
+                                       'face 'mu4e-draft-face))
+     mu4e-headers-attach-mark `("a" . ,(propertize
+                                        (all-the-icons-material "attachment")
+                                        'face 'mu4e-attach-number-face))
+     mu4e-headers-passed-mark `("P" . ,(propertize ; ❯ (I'm participated in thread)
+                                        (all-the-icons-material "center_focus_weak")
+                                        'face `(:family ,(all-the-icons-material-family)
+                                                        :foreground "yellow")))
+     mu4e-headers-flagged-mark `("F" . ,(propertize
+                                         (all-the-icons-material "flag")
+                                         'face 'mu4e-flagged-face))
+     mu4e-headers-replied-mark `("R" . ,(propertize
+                                         (all-the-icons-material "reply_all")
+                                         'face 'mu4e-replied-face))
+     mu4e-headers-trashed-mark `("T" . ,(propertize
+                                         (all-the-icons-material "delete_forever")
+                                         'face 'mu4e-trashed-face)))))
 
 (defun mu4e-marker-icons-disable ()
   "Disable mu4e-marker-icons."
