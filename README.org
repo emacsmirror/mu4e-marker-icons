@@ -1,5 +1,7 @@
 * Intro
 
+Display mu4e email flags with icons.
+
 This package is a work after discussion on [[https://github.com/djcb/mu/issues/1795][mu4e GitHub issue]].
 
 * Screenshot

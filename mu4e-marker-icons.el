@@ -5,7 +5,7 @@
 ;; Package-Requires: ((emacs "26.1") (all-the-icons "4.0.0"))
 ;; Version: 0.1.0
 ;; Keywords: mail
-;; homepage: https://github.com/stardiviner/mu4e-marker-icons
+;; homepage: https://repo.or.cz/mu4e-marker-icons.git
 
 ;; Copyright (C) 2020-2021 Free Software Foundation, Inc.
 ;;
