@@ -74,17 +74,17 @@
   (setq mu4e-headers-precise-alignment t)
   (if mu4e-marker-icons-use-unicode
       ;; The unicode icons is totally from http://xenodium.com/mu4e-icons, Thanks, Alvaro Ramirez.
-      (setq mu4e-headers-unread-mark    '("u" .  "📩 ")
-            mu4e-headers-draft-mark     '("D" .  "🚧 ")
-            mu4e-headers-flagged-mark   '("F" .  "🚩 ")
-            mu4e-headers-new-mark       '("N" .  "✨ ")
-            mu4e-headers-passed-mark    '("P" .  "↪ ")
-            mu4e-headers-replied-mark   '("R" .  "↩ ")
+      (setq mu4e-headers-unread-mark    '("u" .  "📩")
+            mu4e-headers-draft-mark     '("D" .  "🚧")
+            mu4e-headers-flagged-mark   '("F" .  "🚩")
+            mu4e-headers-new-mark       '("N" .  "✨")
+            mu4e-headers-passed-mark    '("P" .  "🆗")
+            mu4e-headers-replied-mark   '("R" .  "📧")
             mu4e-headers-seen-mark      '("S" .  " ")
-            mu4e-headers-trashed-mark   '("T" .  "🗑️")
-            mu4e-headers-attach-mark    '("a" .  "📎 ")
-            mu4e-headers-encrypted-mark '("x" .  "🔑 ")
-            mu4e-headers-signed-mark    '("s" .  "🖊 "))
+            mu4e-headers-trashed-mark   '("T" .  "❎")
+            mu4e-headers-attach-mark    '("a" .  "📎")
+            mu4e-headers-encrypted-mark '("x" .  "🔐")
+            mu4e-headers-signed-mark    '("s" .  "🔑"))
     (setq
      mu4e-headers-seen-mark `("S" . ,(propertize
                                       (all-the-icons-material "mail_outline")
