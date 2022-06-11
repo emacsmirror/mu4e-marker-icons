@@ -84,7 +84,9 @@
             mu4e-headers-trashed-mark   '("T" .  "❎")
             mu4e-headers-attach-mark    '("a" .  "📎")
             mu4e-headers-encrypted-mark '("x" .  "🔐")
-            mu4e-headers-signed-mark    '("s" .  "🔑"))
+            mu4e-headers-signed-mark    '("s" .  "🔑")
+            mu4e-headers-thread-duplicate-prefix '("Ⓓ" . "♊") ; ("=" . "≡ ")
+            )
     (setq
      mu4e-headers-seen-mark `("S" . ,(propertize
                                       (all-the-icons-material "mail_outline")
@@ -123,7 +125,10 @@
                                          'face 'mu4e-replied-face))
      mu4e-headers-trashed-mark `("T" . ,(propertize
                                          (all-the-icons-material "delete_forever")
-                                         'face 'mu4e-trashed-face)))))
+                                         'face 'mu4e-trashed-face))
+     mu4e-headers-thread-duplicate-prefix `("=" . ,(propertize
+                                                    (all-the-icons-faicon "bars")
+                                                    'face 'mu4e-warning-face)))))
 
 (defun mu4e-marker-icons-disable ()
   "Disable mu4e-marker-icons."
