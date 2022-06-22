@@ -86,6 +86,9 @@
             mu4e-headers-encrypted-mark '("x" .  "🔐")
             mu4e-headers-signed-mark    '("s" .  "🔑")
             mu4e-headers-thread-duplicate-prefix '("Ⓓ" . "♊") ; ("=" . "≡ ")
+            mu4e-headers-list-mark      '("s" . "📬")
+            mu4e-headers-personal-mark  '("p" . "🙍")
+            mu4e-headers-calendar-mark  '("c" . "📅")
             )
     (setq
      mu4e-headers-seen-mark `("S" . ,(propertize
@@ -128,7 +131,16 @@
                                          'face 'mu4e-trashed-face))
      mu4e-headers-thread-duplicate-prefix `("=" . ,(propertize
                                                     (all-the-icons-faicon "bars")
-                                                    'face 'mu4e-warning-face)))))
+                                                    'face 'mu4e-warning-face))
+     mu4e-headers-list-mark      '("s" . ,(propertize
+                                           (all-the-icons-faicon "list-ul")
+                                           'face 'mu4e-warning-face))
+     mu4e-headers-personal-mark  '("p" . ,(propertize
+                                           (all-the-icons-faicon "user")
+                                           'face 'mu4e-warning-face))
+     mu4e-headers-calendar-mark  '("c" . ,(propertize
+                                           (all-the-icons-faicon "calendar")
+                                           'face 'mu4e-warning-face)))))
 
 (defun mu4e-marker-icons-disable ()
   "Disable mu4e-marker-icons."
