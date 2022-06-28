@@ -27,4 +27,5 @@ This package is already available on MELPA.
 
 ** Q: got Chinese characters when using mu4e-marker-icons
 
-Check out [[https://github.com/stardiviner/mu4e-marker-icons/issues/1][this issue]].
+The icon displaying issues is caused by all-the-icons, it might related to your font supporting or
+system environments etc. Please search old issues in all-the-icons GitHub Issues page.
