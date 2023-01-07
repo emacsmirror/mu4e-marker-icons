@@ -124,7 +124,7 @@
                                          (all-the-icons-material "flag")
                                          'face 'mu4e-flagged-face))
      mu4e-headers-replied-mark `("R" . ,(propertize
-                                         (all-the-icons-material "reply_all")
+                                         (all-the-icons-faicon "reply-all")
                                          'face 'mu4e-replied-face))
      mu4e-headers-trashed-mark `("T" . ,(propertize
                                          (all-the-icons-material "delete_forever")
