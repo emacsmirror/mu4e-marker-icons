@@ -2,7 +2,7 @@
 ;; -*- coding: utf-8 -*-
 
 ;; Authors: stardiviner <numbchild@gmail.com>
-;; Package-Requires: ((emacs "26.1") (all-the-icons "4.0.0"))
+;; Package-Requires: ((emacs "26.1") (nerd-icons "0.0.1"))
 ;; Version: 0.1.0
 ;; Keywords: mail
 ;; homepage: https://repo.or.cz/mu4e-marker-icons.git
@@ -32,14 +32,14 @@
 ;;; Code:
 
 (require 'mu4e-headers)
-(require 'all-the-icons)
+(require 'nerd-icons)
 
 (defgroup mu4e-marker-icons nil
   "Display icons for mu4e markers."
   :group 'mu4e-marker-icons)
 
 (defcustom mu4e-marker-icons-use-unicode nil
-  "Whether use unicode icons instead of all-the-icons."
+  "Prefer to use unicode icons over nerd-icons."
   :type 'boolean
   :safe #'booleanp)
 
@@ -91,56 +91,21 @@
             mu4e-headers-calendar-mark  '("c" . "📅")
             )
     (setq
-     mu4e-headers-seen-mark `("S" . ,(propertize
-                                      (all-the-icons-material "mail_outline")
-                                      'face `(:family ,(all-the-icons-material-family)
-                                                      :foreground ,(face-background 'default))))
-     mu4e-headers-new-mark `("N" . ,(propertize
-                                     (all-the-icons-material "markunread")
-                                     'face `(:family ,(all-the-icons-material-family)
-                                                     :foreground ,(face-background 'default))))
-     mu4e-headers-unread-mark `("u" . ,(propertize
-                                        (all-the-icons-material "notifications_none")
-                                        'face 'mu4e-unread-face))
-     mu4e-headers-signed-mark `("s" . ,(propertize
-                                        (all-the-icons-material "check")
-                                        'face `(:family ,(all-the-icons-material-family)
-                                                        :foreground "DarkCyan")))
-     mu4e-headers-encrypted-mark `("x" . ,(propertize
-                                           (all-the-icons-material "enhanced_encryption")
-                                           'face `(:family ,(all-the-icons-material-family)
-                                                           :foreground "CornflowerBlue")))
-     mu4e-headers-draft-mark `("D" . ,(propertize
-                                       (all-the-icons-material "drafts")
-                                       'face 'mu4e-draft-face))
-     mu4e-headers-attach-mark `("a" . ,(propertize
-                                        (all-the-icons-material "attachment")
-                                        'face 'mu4e-attach-number-face))
-     mu4e-headers-passed-mark `("P" . ,(propertize ; ❯ (I'm participated in thread)
-                                        (all-the-icons-material "center_focus_weak")
-                                        'face `(:family ,(all-the-icons-material-family)
-                                                        :foreground "yellow")))
-     mu4e-headers-flagged-mark `("F" . ,(propertize
-                                         (all-the-icons-material "flag")
-                                         'face 'mu4e-flagged-face))
-     mu4e-headers-replied-mark `("R" . ,(propertize
-                                         (all-the-icons-faicon "reply-all")
-                                         'face 'mu4e-replied-face))
-     mu4e-headers-trashed-mark `("T" . ,(propertize
-                                         (all-the-icons-material "delete_forever")
-                                         'face 'mu4e-trashed-face))
-     mu4e-headers-thread-duplicate-prefix `("=" . ,(propertize
-                                                    (all-the-icons-faicon "bars")
-                                                    'face 'mu4e-warning-face))
-     mu4e-headers-list-mark      `("s" . ,(propertize
-                                           (all-the-icons-faicon "list-ul")
-                                           'face 'mu4e-warning-face))
-     mu4e-headers-personal-mark  `("p" . ,(propertize
-                                           (all-the-icons-faicon "user")
-                                           'face 'mu4e-warning-face))
-     mu4e-headers-calendar-mark  `("c" . ,(propertize
-                                           (all-the-icons-faicon "calendar")
-                                           'face 'mu4e-warning-face)))))
+     mu4e-headers-seen-mark `("S" . ,(nerd-icons-mdicon "nf-md-email_open_outline" :face 'nerd-icons-dsilver))
+     mu4e-headers-new-mark `("N" . ,(nerd-icons-mdicon "nf-md-email_mark_as_unread" :face 'nerd-icons-lgreen))
+     mu4e-headers-unread-mark `("u" . ,(nerd-icons-mdicon "nf-md-email_outline" :face 'nerd-icons-green))
+     mu4e-headers-signed-mark `("s" . ,(nerd-icons-mdicon "nf-md-email_seal_outline" :face 'nerd-icons-blue)) ; "nf-md-email_check_outline"
+     mu4e-headers-encrypted-mark `("x" . ,(nerd-icons-mdicon "nf-md-email_lock" :face 'nerd-icons-purple))
+     mu4e-headers-draft-mark `("D" . ,(nerd-icons-mdicon "nf-md-email_edit_outline" :face 'nerd-icons-orange))
+     mu4e-headers-attach-mark `("a" . ,(nerd-icons-mdicon "nf-md-email_plus_outline" :face 'nerd-icons-lorange))
+     mu4e-headers-passed-mark `("P" . ,(nerd-icons-mdicon "nf-md-email_fast_outline" :face 'nerd-icons-lpink)) ; ❯ (I'm participated in thread) / Forward
+     mu4e-headers-flagged-mark `("F" . ,(nerd-icons-mdicon "nf-md-email_alert_outline" :face 'nerd-icons-lred))
+     mu4e-headers-replied-mark `("R" . ,(nerd-icons-mdicon "nf-md-reply" :face 'nerd-icons-silver))
+     mu4e-headers-trashed-mark `("T" . ,(nerd-icons-mdicon "nf-md-trash_can_outline" :face 'nerd-icons-dsilver))
+     mu4e-headers-thread-duplicate-prefix `("=" . ,(nerd-icons-mdicon "nf-md-content_duplicate" :face 'nerd-icons-dorange))
+     mu4e-headers-list-mark `("s" . ,(nerd-icons-codicon "nf-cod-list_tree" :face 'nerd-icons-silver))
+     mu4e-headers-personal-mark `("p" . ,(nerd-icons-codicon "nf-cod-person" :face 'nerd-icons-cyan-alt))
+     mu4e-headers-calendar-mark `("c" . ,(nerd-icons-mdicon "nf-md-calendar_import" :face 'nerd-icons-lorange)))))
 
 (defun mu4e-marker-icons-disable ()
   "Disable mu4e-marker-icons."
