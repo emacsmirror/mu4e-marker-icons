@@ -6,7 +6,7 @@ This package is a work after discussion on [[https://github.com/djcb/mu/issues/1
 
 * Screenshot
 
-[[file:mu4e-marker-icons.png]]
+[[file:all-the-icons.png]]
 
 If you toggle option ~mu4e-marker-icons-use-unicode~. Then it will use unicode
 icons, looks like this (This is totally from [[http://xenodium.com/mu4e-icons/][Álvaro Ramírez]], thanks!):
