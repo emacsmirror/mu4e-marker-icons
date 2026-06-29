@@ -105,8 +105,8 @@
       mu4e-headers-new-mark `("N" . ,(nerd-icons-mdicon "nf-md-email_mark_as_unread" :face 'nerd-icons-lgreen))
       mu4e-headers-unread-mark `("u" . ,(nerd-icons-mdicon "nf-md-email_outline" :face 'nerd-icons-green))
       mu4e-headers-signed-mark `("s" . ,(nerd-icons-mdicon "nf-md-email_seal_outline" :face 'nerd-icons-blue)) ; "nf-md-email_check_outline"
-      mu4e-headers-encrypted-mark `("x" . ,(nerd-icons-mdicon "nf-md-email_lock" :face 'nerd-icons-purple))
-      mu4e-headers-draft-mark `("D" . ,(nerd-icons-mdicon "nf-md-email_edit_outline" :face 'nerd-icons-orange))
+      mu4e-headers-encrypted-mark `("x" . ,(nerd-icons-mdicon "nf-md-email_lock" :face 'nerd-icons-blue))
+      mu4e-headers-draft-mark `("D" . ,(nerd-icons-mdicon "nf-md-email_edit_outline" :face 'nerd-icons-silver))
       mu4e-headers-attach-mark `("a" . ,(nerd-icons-mdicon "nf-md-email_plus_outline" :face 'nerd-icons-lorange))
       mu4e-headers-passed-mark `("P" . ,(nerd-icons-mdicon "nf-md-email_fast_outline" :face 'nerd-icons-lpink)) ; ❯ (I'm participated in thread) / Forward
       mu4e-headers-flagged-mark `("F" . ,(nerd-icons-mdicon "nf-md-email_alert_outline" :face 'nerd-icons-lred))
@@ -114,11 +114,11 @@
       mu4e-headers-trashed-mark `("T" . ,(nerd-icons-mdicon "nf-md-trash_can_outline" :face 'nerd-icons-dsilver))
       mu4e-headers-thread-duplicate-prefix `("=" . ,(nerd-icons-mdicon "nf-md-content_duplicate" :face 'nerd-icons-dorange))
       mu4e-headers-list-mark `("s" . ,(nerd-icons-codicon "nf-cod-list_tree" :face 'nerd-icons-silver))
-      mu4e-headers-personal-mark `("p" . ,(nerd-icons-codicon "nf-cod-person" :face 'nerd-icons-cyan-alt))
-      mu4e-headers-calendar-mark `("c" . ,(nerd-icons-mdicon "nf-md-calendar_import" :face 'nerd-icons-lorange)))
+      mu4e-headers-personal-mark `("p" . ,(nerd-icons-mdicon "nf-md-card_account_mail" :face 'nerd-icons-cyan-alt))
+      mu4e-headers-calendar-mark `("c" . ,(nerd-icons-mdicon "nf-md-calendar_outline" :face 'nerd-icons-lorange)))
      (setq mu4e-modeline-all-clear `("C:" . ,(nerd-icons-mdicon "nf-md-email_open_outline" :face 'nerd-icons-green))
-           mu4e-modeline-all-read `("R:" . ,(nerd-icons-mdicon "nf-md-email_mark_as_unread" :face 'nerd-icons-blue))
-           mu4e-modeline-unread-items `("U:" . ,(nerd-icons-mdicon "nf-md-email_plus_outline" :face 'nerd-icons-orange))
+           mu4e-modeline-all-read `("R:" . ,(nerd-icons-mdicon "nf-md-email_check_outline" :face 'nerd-icons-blue))
+           mu4e-modeline-unread-items `("U:" . ,(nerd-icons-mdicon "nf-md-email_multiple_outline" :face 'nerd-icons-orange))
            mu4e-modeline-new-items `("N:" . ,(nerd-icons-mdicon "nf-md-email_alert_outline" :face 'nerd-icons-red))))
     ('all-the-icons
      ;; TODO
